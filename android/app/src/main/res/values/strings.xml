@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HighTool</string>
+    <string name="app_description">An open source app to measure outdoor objects.</string>
 </resources>
