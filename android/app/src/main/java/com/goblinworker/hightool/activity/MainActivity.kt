@@ -1,5 +1,6 @@
 package com.goblinworker.hightool.activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,9 +9,9 @@ import android.widget.TextView
 import com.goblinworker.hightool.BuildConfig
 import com.goblinworker.hightool.R
 
-class MainActivity : AppCompatActivity() {
+const val TAG = "MAIN"
 
-    private val tag = "MAIN"
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,15 +44,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startDistanceActivity() {
-        Log.i(tag, "start distance activity")
+        Log.i(TAG, "start distance activity")
     }
 
     private fun startHistoryActivity() {
-        Log.i(tag, "start history activity")
+        startActivity(Intent(this, HistoryActivity::class.java))
     }
 
     private fun startSettingsActivity() {
-        Log.i(tag, "start settings activity")
+        startActivity(Intent(this, SettingsActivity::class.java))
     }
 
 }
